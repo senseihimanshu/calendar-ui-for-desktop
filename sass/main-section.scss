@@ -8,9 +8,9 @@ main{
 .main__header{
     height: 15%;
     background: linear-gradient(to right, rgba($color-white, .6), rgba($color-text-primary, .6));
-    transform: skewX(-6deg);
+    transform: skewX(-6.8deg);
     position: absolute;
-    right: -6px;
+    right: -8px;
     width: 101.5%;
 
     &-year{
@@ -97,8 +97,14 @@ main{
     background: linear-gradient(to right, rgba($color-primary-light, .2), rgba($color-primary-dark, .2));
     font-size: 4.2rem;
     transform: skewX(-7deg);
+    -webkit-user-select: none;
 }
 
 table{
     width: 100%;
+}
+
+tr:not(:first-child){
+    cursor: pointer;
+    -webkit-user-select: none;
 }

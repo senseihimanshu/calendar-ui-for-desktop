@@ -86,16 +86,28 @@ body {
     height: 25%;
     position: relative; }
     .events__create-event-input {
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 2.4rem;
-      width: 90%; }
+      background-color: rgba(255, 255, 255, 0.6);
+      color: inherit;
+      padding: 2rem;
+      padding-right: 7rem;
+      width: 90%;
+      font-family: inherit;
+      border: none;
+      font-size: 2rem;
+      transition: all .4s; }
+      .events__create-event-input:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.8); }
     .events__create-event-icon {
       background-color: transparent;
       font-size: 3.5rem;
       position: absolute;
       top: .6rem;
       right: 7.5rem;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: color .3s; }
+      .events__create-event-icon:hover {
+        color: #55c57a; }
 
 .row {
   max-width: 114rem;
@@ -124,9 +136,9 @@ main {
 .main__header {
   height: 15%;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(119, 119, 119, 0.6));
-  transform: skewX(-6deg);
+  transform: skewX(-6.8deg);
   position: absolute;
-  right: -6px;
+  right: -8px;
   width: 101.5%; }
   .main__header-year {
     text-align: right;
@@ -192,7 +204,12 @@ main {
 .days {
   background: linear-gradient(to right, rgba(126, 213, 111, 0.2), rgba(40, 180, 133, 0.2));
   font-size: 4.2rem;
-  transform: skewX(-7deg); }
+  transform: skewX(-7deg);
+  -webkit-user-select: none; }
 
 table {
   width: 100%; }
+
+tr:not(:first-child) {
+  cursor: pointer;
+  -webkit-user-select: none; }
