@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    padding: 3rem;
+    color: $color-text-primary;
+    box-sizing: border-box;
+}
+
+.container{
+    overflow: hidden;
+    height: 105vh;
+    width: 100%;
+    z-index: -1;
+    border-radius: 1.6rem;
+    background: url(/img/img-1.jpg), linear-gradient(to bottom right, $color-text-primary, $color-white);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}

@@ -1,0 +1,24 @@
+.row{
+    max-width: $grid-width;
+    margin: 0 auto;
+    &:not(:last-child){
+        margin-bottom: $gutter-vertical; 
+    } 
+
+    @include clearfix;
+
+    [class^="col-"]{
+        float: left;
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .col-1-of-12{
+        width: calc((100% - (11*#{$gutter-horizontal}))/12);
+    }
+
+    .col-1-of-7{
+        width: calc((100% - (6*#{$gutter-horizontal-1}))/7);
+    }
+}

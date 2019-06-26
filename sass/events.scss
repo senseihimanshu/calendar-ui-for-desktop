@@ -1,0 +1,36 @@
+.events{
+    height: 45%;
+    &__container{
+        font-size: 2.4rem;
+        height: 75%;
+        background-image: linear-gradient(to bottom right,rgba($color-white, 0.8), rgba($color-text-primary, 0.8));
+        background-size: cover;
+        background-position: center; 
+        transition: filter .2s;
+
+        & li{
+            color: $color-text-primary;
+            transform: translate(4rem, .2rem);
+            font-size: 1.6rem;
+            list-style: disc;
+        }
+    }
+    &__create-event{
+        height: 25%;
+        position: relative;
+        &-input{
+            background-color: rgba($color-white, .8);
+            padding: 2.4rem;
+            width: 90%;
+        }
+
+        &-icon{
+            background-color: transparent;
+            font-size: 3.5rem;
+            position: absolute;
+            top: .6rem;
+            right: 7.5rem;
+            cursor: pointer;
+        }
+    }
+}

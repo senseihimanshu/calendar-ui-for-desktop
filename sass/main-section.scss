@@ -1,0 +1,104 @@
+main{
+    height: 100%;
+    width: 65%;
+    float: right;
+    position: relative;
+}
+
+.main__header{
+    height: 15%;
+    background: linear-gradient(to right, rgba($color-white, .6), rgba($color-text-primary, .6));
+    transform: skewX(-6deg);
+    position: absolute;
+    right: -6px;
+    width: 101.5%;
+
+    &-year{
+        text-align: right;
+        padding-right: 5rem;
+        font-size: 2.6rem;
+        font-weight: 700;
+        transform: translateY(-4px);
+        color: #454545;
+        -webkit-user-select: none;
+
+        & a{
+            display: inline-block;
+            text-decoration: none;
+            color: $color-primary-dark;
+            transform: translateX(0) translateY(-2px);
+            font-size: 5.2rem; 
+        }
+    }
+}
+
+.arr-left:hover{
+    animation: arrow-left 2s infinite;
+}
+
+.arr-right:hover{
+    animation: arrow-right 2s infinite;
+}
+
+@keyframes arrow-left{
+    0%{
+        transform: translateX(0) translateY(-2px);
+    }
+    50%{
+        transform: translateX(-2rem) translateY(-2px) scaleX(2);
+    }
+    100%{
+        transform: translateX(0) translateY(-2px);
+    }
+}
+
+@keyframes arrow-right{
+    0%{
+        transform: translateX(0) translateY(-2px);
+    }
+    50%{
+        transform: translateX(2rem) translateY(-2px) scaleX(2);
+    }
+    100%{
+        transform: translateX(0) translateY(-2px);
+    }
+}
+
+.main__grid{
+    height: 100%;
+    text-align: center;
+}
+
+.main-months{
+    position: absolute;
+    top: .5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    & a{
+        cursor: pointer;
+        color: #454545;
+        -webkit-user-select: none;
+    }
+}
+
+.main-dates{
+    position: absolute;
+    width: 103%;
+    left: .6rem;
+    top: 8.4rem;
+    font-size: 3.8rem;
+    font-weight: 400;
+    color: #454545;
+    transform: translateX(-2rem);
+}
+
+.days{
+    background: linear-gradient(to right, rgba($color-primary-light, .2), rgba($color-primary-dark, .2));
+    font-size: 4.2rem;
+    transform: skewX(-7deg);
+}
+
+table{
+    width: 100%;
+}
